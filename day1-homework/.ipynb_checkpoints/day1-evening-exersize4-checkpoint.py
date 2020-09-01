@@ -1,0 +1,94 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<_io.TextIOWrapper name='/Users/cmdb/data/results/SRR072893.sam' mode='r' encoding='UTF-8'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Open file and assing f\n",
+    "f = open('/Users/cmdb/data/results/SRR072893.sam')\n",
+    "print(f)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "chr location for first 10 matches:\n",
+      "2L\n",
+      "2L\n",
+      "2L\n",
+      "2L\n",
+      "2L\n",
+      "2L\n",
+      "2L\n",
+      "2L\n",
+      "2L\n",
+      "2L\n",
+      "number of matches= 10\n"
+     ]
+    }
+   ],
+   "source": [
+    "#define variables\n",
+    "i = 0 #itteration Count\n",
+    "print('chr location for first 10 matches:')\n",
+    "\n",
+    "#start itterated loop (for)\n",
+    "for line in f:\n",
+    "    if i == 10:\n",
+    "        break\n",
+    "    field = line.strip('\\r\\n').split('\\t')\n",
+    "    print(field[2])\n",
+    "    i += 1\n",
+    "    \n",
+    "        \n",
+    "print('number of matches=', i)\n",
+    "\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
